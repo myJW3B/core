@@ -17,6 +17,10 @@ class Helpful {
 		}
 	}
 
+	public static function p($t){
+		return '<pre>'.print_r($t, 1).'</pre>';
+	}
+
 	public static function get_large_img($img){
 		$base = basename($img);
 		$large_img = str_replace($base, 'l'.substr($base, 1), $img);
