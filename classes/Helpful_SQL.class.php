@@ -1,7 +1,7 @@
 <?php
 
 namespace JW3B\core;
-class Helpful_SQL {
+class Helpful_SQL extends Helpful {
 	// already set up for USA money
 	public static function decimal($str, $length=13, $after=2){
 		if($str == '') $str = '0.00';
