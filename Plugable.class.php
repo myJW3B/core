@@ -17,9 +17,9 @@
 namespace JW3B\core\Plugable;
 
 class Plugable {
-	public $events = Plugable::events;
+	public $events = self::events;
 
-	public $filter = Plugable::filter;
+	public $filter = self::filter;
 
 	public static function loadPlugins($plugins, $dir){
 		if(isset($plugins) && is_array($plugins)){
@@ -46,11 +46,11 @@ class Plugable {
 	}
 
 	public static function removeHook($event, $func){
-		if(isset(Plugable::$events[$event])){
-			if(in_array($func, Plugable::$events[$event])){
-				$key = array_search($func,Plugable::$events[$event]);
+		if(isset(self::$events[$event])){
+			if(in_array($func, self::$events[$event])){
+				$key = array_search($func,self::$events[$event]);
 				if($key!==false){
-					unset(Plugable::$events[$event][$key]);
+					unset(self::$events[$event][$key]);
 				}
 			}
 		}
@@ -64,8 +64,8 @@ class Plugable {
 		//Hook name should always be first argument
 		$hook_name = array_shift($args);
 		// this does whatever hooks are attached to the $event
-		if(isset(Plugable::$events[$hook_name])){
-			foreach(Plugable::$events[$hook_name] as $k => $v){
+		if(isset(self::$events[$hook_name])){
+			foreach(self::$events[$hook_name] as $k => $v){
 				if(function_exists($v)){
 					//call_user_func($v);
 					return $v($args);
@@ -80,12 +80,12 @@ class Plugable {
 
 	// this activates the hook..
 	public static function addFilter($event, $array){
-		Plugable::$filter[$event][] = $array;
+		self::$filter[$event][] = $array;
 	}
 
 	public static function doFilter($event, $func){
-		if(isset(Plugable::$filter[$event]) && function_exists($func)){
-			return $func(Plugable::$filter[$event]);
+		if(isset(self::$filter[$event]) && function_exists($func)){
+			return $func(self::$filter[$event]);
 		} else {
 			return '';
 		}
