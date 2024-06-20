@@ -7,7 +7,7 @@ namespace JW3B\core\Error;
 
 class Error {
 
-	public static function errors($notes, $type='basic', $die=false){
+	public static function e($notes, $type='basic', $die=false){
 		$dir = Config::$error_dir;
 		if(!is_dir($dir)) mkdir($dir, 0777);
 		$file = $dir.$type.'.dat';

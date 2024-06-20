@@ -1,8 +1,8 @@
 {
 	"name": "myjw3b/core",
 	"type": "project",
-	"description": "The start of a new way of thinking PHP.",
 	"minimum-stability": "dev",
+	"description": "The start of a new way of thinking PHP. Imagemagick is required to be installed on the machine this package would be used at.",
 	"license": "MIT",
 	"authors": [
 		{
@@ -13,7 +13,13 @@
 		}
 	],
 	"autoload": {
-		"files": ["Plugable.class.php", "Config.class.php", "Error.class.php"]
+		"files": [
+			"Config.class.php",
+			"Error.class.php",
+			"Helpful.class.php",
+			"Helpful_SQL.class.php",
+			"Plugable.class.php"
+		]
 	},
 	"require": {
 		"php": "^8.0"
