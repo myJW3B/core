@@ -1,7 +1,7 @@
 <?php
 namespace JW3B\core\classes\Template;
-use JW3B\core\classes\Config;
-use JW3B\core\classes\Error;
+use JW3B\core\classes\Config\Config;
+use JW3B\core\classes\Error\Error;
 
 class Template {
 	public $dir;

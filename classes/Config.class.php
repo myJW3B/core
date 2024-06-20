@@ -8,7 +8,7 @@ class Config {
 		@ $path path to config file.
 	*/
 	public function __construct($path='config.php'){
-		self::$c = include(__DIR__.'/../../../'.$path);
+		self::$c = include(__DIR__.'/../../../../'.$path);
 	}
 
 	public static function get($key){
