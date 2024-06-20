@@ -16,6 +16,6 @@
 		"classmap": ["*.class.php"]
 	},
 	"require": {
-		"php": "^8.2"
+		"php": "^8.0"
 	}
 }
