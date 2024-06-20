@@ -13,7 +13,7 @@
 		}
 	],
 	"autoload": {
-		"files": ["Plugable.class.php"]
+		"files": ["Plugable.class.php", "Confid.class.php", "Error.class.php"]
 	},
 	"require": {
 		"php": "^8.0"
