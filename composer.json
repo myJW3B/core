@@ -1,7 +1,6 @@
 {
 	"name": "myjw3b/core",
 	"type": "project",
-	"minimum-stability": "dev",
 	"description": "The start of a new way of thinking PHP. Imagemagick is required to be installed on the machine this package would be used at.",
 	"license": "MIT",
 	"authors": [
