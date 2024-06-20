@@ -16,6 +16,7 @@
 		"classmap": ["classes/"]
 	},
 	"require": {
-		"php": "^8.0"
+		"php": "^8.0",
+		"myjw3b/minify": "dev-master"
 	}
 }
