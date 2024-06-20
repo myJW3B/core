@@ -1,5 +1,5 @@
 {
-	"name": "jw3b/core",
+	"name": "myjw3b/core",
 	"type": "project",
 	"description": "The start of a new way of thinking PHP.",
 	"minimum-stability": "dev",
@@ -7,8 +7,8 @@
 	"authors": [
 		{
 			"name": "John Brittain III",
-			"email": "yohn@jw3b.com",
-			"homepage": "https://www.jw3b.com",
+			"email": "Yohn@coming-soon.com",
+			"homepage": "https://github.com/Yohn",
 			"role": "Developer"
 		}
 	],
