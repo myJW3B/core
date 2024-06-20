@@ -3,15 +3,15 @@
 	Look, I want to put everything into plugins..
 		to do this I need to activate and deactivate the plugins..
 	I may need to do more research on this..
-	$Sets['website']['plugins'] = array(	'Events', 'News', 'Pictures');
+	$plugins = array(	'Events', 'News', 'Pictures');
 	include('classes/Plugable.php');
-	$Sets['core']['Plugable'] = new Plugable;
-	$Sets['core']['Plugable']->loadPlugins($Sets['website']['plugins'], $_SERVER['DOCUMENT_ROOT'].'/pluggable/plugins/');
+	$Plugable = new Plugable;
+	$Plugable->loadPlugins($Sets['website']['plugins'], $_SERVER['DOCUMENT_ROOT'].'/pluggable/plugins/');
 
 	echo '<pre>';
-	print_r($Sets['core']['Plugable']->events);
+	print_r($Plugable->events);
 	echo '</pre>';
-	$Sets['core']['Plugable']->doHook('startup');
+	$Plugable->doHook('startup');
 */
 
 namespace JW3B\core\Plugable;

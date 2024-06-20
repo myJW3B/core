@@ -1,0 +1,21 @@
+{
+	"name": "jw3b/core",
+	"type": "project",
+	"description": "The start of a new way of thinking PHP.",
+	"minimum-stability": "dev",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "John Brittain III",
+			"email": "yohn@jw3b.com",
+			"homepage": "https://www.jw3b.com",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"classmap": ["*.class.php"]
+	},
+	"require": {
+		"php": "^8.2"
+	}
+}
