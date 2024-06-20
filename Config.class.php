@@ -2,8 +2,16 @@
 namespace JW3B\core\Config;
 
 class Config {
-	public static $config = [];
-	public function __construct(){
-		self::$config = file_get_contents(__DIR__.'/../../../config.php');
+	public static $c = [];
+
+	/*
+		@ $path path to config file.
+	*/
+	public function __construct($path='config.php'){
+		self::$c = include(__DIR__.'/../../../'.$path);
+	}
+
+	public static function get($key){
+		return self::$c[$key] ? self::$c[$key] : false;
 	}
 }
