@@ -3,8 +3,8 @@
  * Requires Config::error_dir to be set
  * 	This is to path to the directory where the error logs will be saved.
  */
-namespace JW3B\core\classes\Error;
-use JW3B\core\classes\Config;
+namespace JW3B\core;
+use JW3B\core\Config;
 
 class Error {
 

@@ -14,7 +14,8 @@
 	$Plugable->doHook('startup');
 */
 
-namespace JW3B\core\classes\Plugable;
+namespace JW3B\core;
+use JW3B\core\Error;
 
 class Plugable {
 	public $events = self::events;
@@ -70,7 +71,7 @@ class Plugable {
 					//call_user_func($v);
 					return $v($args);
 				} else {
-					die($v.' function does not exist');
+					Error::e($v.' function does not exist in plugable class for '.$hook_name, 'plugable', true);
 				}
 			}
 		} else {

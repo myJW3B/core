@@ -1,6 +1,6 @@
 <?php
 
-namespace JW3B\core\classes\Helpful_SQL;
+namespace JW3B\core;
 class Helpful_SQL {
 	// already set up for USA money
 	public static function decimal($str, $length=13, $after=2){
