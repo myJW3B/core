@@ -35,8 +35,8 @@ class Helpful {
 		return preg_replace(['/[^a-zA-Z0-9+]/', '/--+/'], '-', trim(stripslashes($str)));
 	}
 
-	public static function clean_text($str, $nl2br=''){
-		$ret = $nl2br == '' ? trim(htmlentities(stripslashes($str))) : nl2br(trim(htmlentities(stripslashes($str))));
+	public static function clean_text($str, $nl2br=false){
+		$ret = $nl2br == false ? trim(htmlentities(stripslashes($str))) : nl2br(trim(htmlentities(stripslashes($str))));
 		return $ret;
 	}
 

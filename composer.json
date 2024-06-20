@@ -16,6 +16,6 @@
 	},
 	"require": {
 		"php": "^8.0",
-		"myjw3b/minify": "dev-master"
+		"myjw3b/minify": "v1"
 	}
 }

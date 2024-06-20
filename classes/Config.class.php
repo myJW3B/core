@@ -3,24 +3,26 @@ namespace JW3B\core;
 
 class Config {
 	public static $c = []; // sites configs
+	public static $l = []; // language translations
 	public static $r = []; // reserved words
 	public static $t = []; // database tables
 
 	/*
 		@ $path path to config file.
 	*/
-	public function __construct($directory='configs'){
-		self::$c = include(__DIR__.'/../../../../'.$directory.'/config.php');
-		self::$r = include(__DIR__.'/../../../../'.$directory.'/reserved_usernames.php');
-		self::$t = include(__DIR__.'/../../../../'.$directory.'/database_tables.php');
+	public function __construct($directory=__DIR__.'/../../../../configs'){
+		self::$c = include($directory.'/config.php');
+		self::$r = include($directory.'/reserved_usernames.php');
+		self::$t = include($directory.'/database_tables.php');
+		self::$l = include($directory.'/language.php');
 	}
 
-	public static function get($key){
-		return self::$c[$key] ? self::$c[$key] : false;
+	public static function get($key, $w='c'){
+		return self::$$w[$key] ? self::$$w[$key] : false;
 	}
 
-	public static function set($key, $value){
-		self::$c[$key] = $value;
+	public static function set($key, $value, $w){
+		self::$$w[$key] = $value;
 		return true;
 	}
 }
