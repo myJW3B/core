@@ -14,7 +14,7 @@
 	$Plugable->doHook('startup');
 */
 
-namespace JW3B\core\Plugable;
+namespace JW3B\core\classes\Plugable;
 
 class Plugable {
 	public $events = self::events;

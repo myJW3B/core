@@ -1,5 +1,5 @@
 <?php
-namespace JW3B\core\Helpful;
+namespace JW3B\core\classes\Helpful;
 
 class Helpful {
 	public static function get_large_img($img){

@@ -3,12 +3,13 @@
  * Requires Config::error_dir to be set
  * 	This is to path to the directory where the error logs will be saved.
  */
-namespace JW3B\core\Error;
+namespace JW3B\core\classes\Error;
+use JW3B\core\classes\Config;
 
 class Error {
 
 	public static function e($notes, $type='basic', $die=false){
-		$dir = Config::$error_dir;
+		$dir = Config::$c['error_dir'];
 		if(!is_dir($dir)) mkdir($dir, 0777);
 		$file = $dir.$type.'.dat';
 		$GET = print_r($_GET, true);

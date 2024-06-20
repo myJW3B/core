@@ -13,13 +13,7 @@
 		}
 	],
 	"autoload": {
-		"files": [
-			"Config.class.php",
-			"Error.class.php",
-			"Helpful.class.php",
-			"Helpful_SQL.class.php",
-			"Plugable.class.php"
-		]
+		"classmap": ["classes/"]
 	},
 	"require": {
 		"php": "^8.0"

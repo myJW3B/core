@@ -1,5 +1,5 @@
 <?php
-namespace JW3B\core\Config;
+namespace JW3B\core\classes\Config;
 
 class Config {
 	public static $c = [];
