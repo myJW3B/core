@@ -17,8 +17,6 @@
 		}
 	},
 	"require": {
-		"php": "^8.0",
-		"myjw3b/minify": "v1.1",
-		"myjw3b/language": "dev-main"
+		"php": "^8.0"
 	}
 }
