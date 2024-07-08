@@ -11,6 +11,9 @@ class Error {
 	public static function e($notes, $type='basic', $die=false){
 		$dir = Config::$c['error_dir'];
 		if(!is_dir($dir)) mkdir($dir, 0777);
+		//$dir .= $type.'/';
+		//if(!is_dir($dir)) mkdir($dir, 0777);
+		//$file = $dir.date('Y-m-d-H-i').'.dat';
 		$file = $dir.$type.'.dat';
 		$GET = print_r($_GET, true);
 		$POST = print_r($_POST, true);
@@ -38,11 +41,11 @@ class Error {
 
 		GET = '.$GET.'
 		POST = '.$POST.'
-		SESSION = '.$SES.'
 		FILES = '.$FILES.'
 
 		debug_backtrace = '.$debug.'
 		';
+		//SESSION = '.$SES.'
 		//COK = '.$COK.'
 		//';
 
@@ -54,5 +57,14 @@ class Error {
 			flock($fp, LOCK_UN);
 			fclose($fp);
 		return $die == true ? die('<pre>'.$putIn.'</pre>') : '';
+	}
+
+	public static function check_errors($type='basic'){
+		$dir = Config::$c['error_dir'];
+		$file = file(Config::$c['error_dir'].$type.'.dat');
+		foreach($file as $line){
+			$ret[] = urldecode( $line );
+		}
+		return $ret;
 	}
 }
