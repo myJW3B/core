@@ -3,6 +3,7 @@
 	"type": "project",
 	"description": "The start of a new way of thinking PHP. Imagemagick is required to be installed on the machine this package would be used at.",
 	"license": "MIT",
+	"minimum-stability": "dev",
 	"authors": [
 		{
 			"name": "John Brittain III",
