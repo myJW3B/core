@@ -5,7 +5,8 @@ class Config {
 	public static $c = []; // sites configs
 	public static $l = []; // language translations
 	public static $r = []; // reserved words
-	public static $t = []; // database tables
+	public static $t = []; // database table
+	public static $w = []; // website settings... maybe.. idk yet..
 
 	/*
 	 *@ $path path to config file.
@@ -18,7 +19,7 @@ class Config {
 	}
 
 	public static function get($key, $w = 'c') {
-		return self::$$w[$key] ? self::$$w[$key] : false;
+		return self::$$w[$key] ?? false;
 	}
 
 	public static function set($key, $value, $w) {
